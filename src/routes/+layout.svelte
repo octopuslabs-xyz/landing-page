@@ -16,16 +16,23 @@
 
 				<!-- Menu on the right with 3 buttons -->
 				<div class="flex space-x-6">
+					<a href="https://blog.octopus-labs.xyz" target="_blank">
+						<button
+							class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all button"
+						>
+							Blog
+						</button>
+					</a>
+
+					<a href="https://github.com/octopuslabs-xyz" target="_blank">
+						<button
+							class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
+							>Github</button
+						>
+					</a>
+
 					<button
-						class="bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
-						>Blog</button
-					>
-					<button
-						class="bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
-						>Github</button
-					>
-					<button
-						class="bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
+						class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
 						>Console</button
 					>
 				</div>
