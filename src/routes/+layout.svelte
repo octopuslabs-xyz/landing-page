@@ -1,60 +1,44 @@
 <script>
-	import '../styles/global.css';
+	// @ts-nocheck
 
+	import '../styles/global.css';
 	import logo from '../assets/octo.png';
 </script>
 
-<div class="h-screen flex flex-col overflow-hidden">
-	<!-- Navbar -->
-	<div class="flex flex-col h-screen overflow-hidden">
-		<div class="h-10vh text-white p-4 fixed w-full z-10 top-0">
-			<div class="container mx-auto flex items-center justify-between">
-				<!-- Logo on the left -->
-				<div class="flex">
-					<img src={logo} alt="Logo" class="h-24" />
-				</div>
-
-				<!-- Menu on the right with 3 buttons -->
-				<div class="flex space-x-6">
-					<a href="https://blog.octopus-labs.xyz" target="_blank">
-						<button
-							class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all button"
-						>
-							Blog
-						</button>
-					</a>
-
-					<a href="https://github.com/octopuslabs-xyz" target="_blank">
-						<button
-							class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
-							>Github</button
-						>
-					</a>
-
-					<button
-						class="cursor-pointer bg-transparent text-white hover:bg-gray-600 px-4 py-2 rounded-md transition-all"
-						>Console</button
-					>
-				</div>
-			</div>
+<div class="h-screen w-screen flex flex-col bg-black text-white">
+	<!-- Header -->
+	<header class="h-[5%] shadow-sm flex items-center justify-between px-8 my-5">
+		<div class="flex items-center gap-2">
+			<a href="/">
+				<img src={logo} alt="Logo" class="h-24" />
+			</a>
 		</div>
-	</div>
+		<nav class="flex gap-6">
+			<a
+				href="https://blog.octopus-labs.xyz"
+				target="_blank"
+				class="text-gray-200 hover:text-gray-600">Blog</a
+			>
+			<a
+				href="https://github.com/octopuslabs-xyz"
+				target="_blank"
+				class="text-gray-200 hover:text-gray-600">Github</a
+			>
+			<a href="/console" class="text-gray-200 hover:text-gray-400">Console</a>
+		</nav>
+	</header>
 
 	<!-- Main -->
-	<div class="h-80vh">
-		<slot></slot>
-	</div>
+	<main class="h-[90%] flex items-center justify-center p-8">
+		<slot />
+	</main>
 
 	<!-- Footer -->
-	<footer class="h-10vh text-white py-4 mt-auto">
-		<div class="container mx-auto flex items-center justify-start">
-			<div class="flex items-center">
-				<!-- <img src="/assets/logo.png" alt="Logo" class="h-6 mr-2"> Logo -->
-				<span class="text-sm">© 2025 Octopus Labs</span>
-			</div>
-		</div>
+	<footer class="h-[5%] flex items-center justify-between px-8">
+		<p class="text-sm">© 2025 Octopus Labs.</p>
+		<!-- <div class="flex gap-4">
+			<a href="/" class="text-gray-300 hover:text-white">Privacy Policy</a>
+			<a href="/" class="text-gray-300 hover:text-white">Terms of Service</a>
+		</div> -->
 	</footer>
 </div>
-
-<style>
-</style>

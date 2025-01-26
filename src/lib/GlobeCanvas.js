@@ -109,7 +109,7 @@ export default class GlobeCanvas {
     afterResize() {
         this.width = window.innerWidth;
         this.height = window.innerHeight;
-        this.GLOBE_RADIUS = this.width * 0.3;
+        this.GLOBE_RADIUS = this.width * 0.2;
         this.GLOBE_CENTER_Z = -this.GLOBE_RADIUS;
         this.PROJECTION_CENTER_X = this.width / 2;
         this.PROJECTION_CENTER_Y = this.height / 2;
